@@ -11,7 +11,7 @@ export LESS_TERMCAP_us=$'\E[01;32m'
 alias mv="mv -iv" # tell me what happened, warn about overwrites
 alias cp="cp -riv" # tell me what happened, warn about overwrites
 alias mkdir="mkdir -vp" # tell me what happened, create nested dirs
-alias ls="exa"
-alias ll="exa -l"
+alias ls="eza"
+alias ll="eza -l"
 
 export PATH=$PATH:$DOTDIR/frk/bin
