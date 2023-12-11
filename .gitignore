@@ -2,21 +2,27 @@
 !tmux
 !tmux/
 !tmux/*
+!tmux/**
+tmux/plugins
 
 !frk
 !frk/
 !frk/*
+!frk/**
 
 !fzf
 !fzf/
 !fzf/*
+!fzf/**
 
 !wezterm
 !wezterm/
 !wezterm/*
+!wezterm/**
 
 !gitui
 !gitui/
 !gitui/*
+!gitui/**
 
 nvim
