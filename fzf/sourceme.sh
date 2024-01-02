@@ -1,2 +1,5 @@
 # set colorscheme
-source $DOTDIR/fzf/colorschemes/horizon-dark-base-16.sh
+source $DOTDIR/fzf/colorschemes/rose-pine.sh
+
+source $DOTDIR/fzf/aliases/cd.sh
+source $DOTDIR/fzf/aliases/nvim.sh

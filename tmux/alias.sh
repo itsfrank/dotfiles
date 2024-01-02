@@ -4,8 +4,8 @@ tmx()
     $DOTDIR/tmux/scripts/tmx.sh
 }
 
-tmxs()
+tms()
 {
-    $DOTDIR/tmux/scripts/tmxs.sh
+    $DOTDIR/tmux/scripts/tms.sh
 }
 
