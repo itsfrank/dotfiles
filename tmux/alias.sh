@@ -1,11 +1,11 @@
 # my tmux helper
 tmx()
 {
-    $DOTDIR/tmux/scripts/tmx.sh
+    $DOTDIR/tmux/scripts/tmx.sh $@
 }
 
 tms()
 {
-    $DOTDIR/tmux/scripts/tms.sh
+    $DOTDIR/tmux/scripts/tms.sh $@
 }
 

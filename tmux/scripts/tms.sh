@@ -5,6 +5,7 @@ if [[ $# -eq 1 ]]; then
 else
     selected=$(find \
             ~/git \
+            ~/git/misc \
             ~/frk \
             ~/frk/go \
             ~/frk/nvim-plugins \

@@ -26,3 +26,8 @@ tmux/plugins
 !gitui/**
 
 nvim
+
+!rbx-nvim
+!rbx-nvim/
+!rbx-nvim/*
+!rbx-nvim/**

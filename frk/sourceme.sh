@@ -12,6 +12,6 @@ alias mv="mv -iv" # tell me what happened, warn about overwrites
 alias cp="cp -riv" # tell me what happened, warn about overwrites
 alias mkdir="mkdir -vp" # tell me what happened, create nested dirs
 alias ls="eza"
-alias ll="eza -l"
+alias ll="eza -la"
 
 export PATH=$PATH:$DOTDIR/frk/bin

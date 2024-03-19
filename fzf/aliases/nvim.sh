@@ -1,5 +1,8 @@
+alias vi="nvim"
+alias vim="nvim"
+
 #nvimd - fuzzy find directory and launch nvim
-nvimd() {
+function nvimd {
     local target_path="${1:-$(pwd)}"
     local selected_dir
 
@@ -17,7 +20,7 @@ nvimd() {
 }
 
 # nvimf - fuzzy find file and launch nvim
-nvimf() {
+function nvimf {
     local target_path="${1:-$(pwd)}"
     local selected_file
 
