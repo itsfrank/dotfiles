@@ -13,5 +13,9 @@ alias cp="cp -riv" # tell me what happened, warn about overwrites
 alias mkdir="mkdir -vp" # tell me what happened, create nested dirs
 alias ls="eza"
 alias ll="eza -la"
+alias gustab="git switch stable && git fetch upstream stable && git merge upstream/stable && git push origin stable && git switch -"
+alias gmstab="git switch stable && git fetch upstream stable && git merge upstream/stable && git push origin stable && git switch - && git merge stable"
 
 export PATH=$PATH:$DOTDIR/frk/bin
+
+
