@@ -1,0 +1,20 @@
+#!/bin/bash
+
+# check var
+port=${NOTIFY_PORT:-34567}
+
+case $# in
+    0)
+        # do nothing
+        ;;
+    1)
+        echo "{\"evt\": \"$1\"}" | nc localhost "$port" >/dev/null 2>&1
+
+        ;;
+    2)
+        echo "{\"evt\": \"$1\", \"msg\": \"$2\"}" | nc localhost "$port" >/dev/null 2>&1
+        ;;
+esac
+# the nc call might fail if ther eis no server listening, but this script doesnt consider that a failure
+# I want to use this script in command chains, it should not caus echains to fail
+exit 0

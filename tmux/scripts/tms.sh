@@ -5,6 +5,9 @@ if [[ $# -eq 1 ]]; then
 else
     selected=$(find \
             ~/git \
+            ~/git/roblox \
+            ~/git/roblox/utils \
+            ~/git/roblox/misc \
             ~/git/misc \
             ~/frk \
             ~/frk/go \
@@ -12,7 +15,7 @@ else
             ~/misc \
         -mindepth 1 -maxdepth 1 -type d)
     selected+="\n"
-    selected+=$(find ~/git/ge-worktrees -mindepth 2 -maxdepth 2 -type d)
+    selected+=$(find ~/git/roblox/ge-worktrees -mindepth 2 -maxdepth 2 -type d)
     selected=$(printf "$selected" | fzf)
 fi
 
