@@ -16,6 +16,8 @@ else
         -mindepth 1 -maxdepth 1 -type d)
     selected+="\n"
     selected+=$(find ~/git/roblox/ge-worktrees -mindepth 2 -maxdepth 2 -type d)
+    selected+="\n"
+    selected+="$HOME/.config"
     selected=$(printf "$selected" | fzf)
 fi
 
