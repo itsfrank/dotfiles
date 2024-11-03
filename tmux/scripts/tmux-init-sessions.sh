@@ -13,6 +13,8 @@ function make_session { # $1: name $2: dir
 scr_name="scratch"
 if (make_session "$scr_name" "$HOME"); then
     echo "created session '$scr_name'"
+else
+    echo "session '$scr_name' already exists"
 fi
 
 df_name="dotfiles"
@@ -23,4 +25,6 @@ if (make_session "$df_name" "$HOME/.config"); then
     tmux new-window -t "$df_name" -n "config"
     tmux select-window -t "$df_name:1"
     echo "created session '$df_name'"
+else
+    echo "session '$df_name' already exists"
 fi
