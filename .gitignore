@@ -31,3 +31,9 @@ nvim
 !rbx-nvim/
 !rbx-nvim/*
 !rbx-nvim/**
+
+!karabiner
+!karabiner/
+!karabiner/*
+!karabiner/**
+karabiner/automatic_backups
