@@ -3,7 +3,7 @@ local wezterm = require("wezterm")
 return {
     -- fonts
     font_size = 18,
-    font = wezterm.font("Red Hat Mono", { weight = "Medium" }),
+    font = wezterm.font("SauceCodePro Nerd Font", { weight = "Medium" }),
     -- font = wezterm.font("Source Code Pro", { weight = "Medium" }),
     -- font = wezterm.font('Fira Code', { weight = 'Medium' }),
 

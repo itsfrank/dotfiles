@@ -18,6 +18,8 @@ else
     selected+=$(find ~/git/roblox/ge-worktrees -mindepth 2 -maxdepth 2 -type d)
     selected+="\n"
     selected+="$HOME/.config"
+    selected+="$HOME/.config/nvim"
+    selected+="$HOME/dotfiles"
     selected=$(printf '%s' "$selected" | fzf)
 fi
 
