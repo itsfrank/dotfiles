@@ -1,0 +1,16 @@
+theme = rose-pine
+
+font-family = SauceCodePro Nerd Font
+font-size = 18
+font-style = Medium
+
+cursor-style = block
+cursor-style-blink = false
+cursor-color = #e0def4
+adjust-cursor-thickness = 3
+shell-integration-features = no-cursor
+
+macos-titlebar-style = hidden
+window-padding-x = 8
+window-padding-y = 8
+window-padding-balance = true

@@ -3,24 +3,27 @@
 if [[ $# -eq 1 ]]; then
     selected=$1
 else
-    selected=$(find \
-        ~/git \
-        ~/git/roblox \
-        ~/git/roblox/utils \
-        ~/git/roblox/misc \
-        ~/git/misc \
-        ~/frk \
-        ~/frk/go \
-        ~/frk/nvim-plugins \
-        ~/misc \
-        -mindepth 1 -maxdepth 1 -type d)
-    selected+="\n"
-    selected+=$(find ~/git/roblox/ge-worktrees -mindepth 2 -maxdepth 2 -type d)
-    selected+="\n"
-    selected+="$HOME/.config"
-    selected+="$HOME/.config/nvim"
-    selected+="$HOME/dotfiles"
-    selected=$(printf '%s' "$selected" | fzf)
+    selected=(
+        $(
+            fd --max-depth 1 --type d . \
+                ~/dev \
+                ~/git \
+                ~/git/roblox \
+                ~/git/roblox/utils \
+                ~/git/roblox/misc \
+                ~/git/misc \
+                ~/frk \
+                ~/frk/go \
+                ~/frk/nvim-plugins \
+                ~/misc \
+                2>/dev/null
+        )
+        $(fd --type d --min-depth 2 --max-depth 2 . ~/git/roblox/ge-worktrees 2>/dev/null)
+        "$HOME/.config"
+        "$HOME/.config/nvim"
+        "$HOME/dotfiles"
+    )
+    selected=$(printf '%s\n' "${selected[@]}" | fzf)
 fi
 
 if [[ -z $selected ]]; then

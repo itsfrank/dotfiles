@@ -28,6 +28,7 @@ in
     # utils
     pkgs.fzf
     pkgs.ripgrep
+    pkgs.fd
     pkgs.bat
     pkgs.eza
     pkgs.gitui
@@ -38,6 +39,7 @@ in
     pkgs.go # go
     pkgs.deno # js/ts
     pkgs.nodejs_23
+    pkgs.zig # zig
     pkgs.nixfmt-rfc-style # nix, nixfmt isnt on mason
 
     # luau
@@ -56,6 +58,7 @@ in
   home.file.".config/gitui".source = ./gitui;
   home.file.".config/tmux".source = ./tmux;
   home.file.".config/wezterm".source = ./wezterm;
+  home.file.".config/ghostty".source = ./ghostty;
   home.file.".config/starship.toml".source = ./starship.toml;
   home.file.".config/frk".source = ./frk;
   home.file.".config/fzf".source = ./fzf;

@@ -13,6 +13,11 @@ if [ -e $HOME/sourceme.sh ]; then
     source $HOME/sourceme.sh
 fi
 
+if [ -e $HOME/.keysrc ]; then
+    source $HOME/.keysrc
+fi
+
+
 # prompt
 eval "$(starship init zsh)"
 
