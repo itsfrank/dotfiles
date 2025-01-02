@@ -30,10 +30,18 @@ local k = {
         show_profile_name_in_menu_bar = true,
     },
     profiles = {
-        { name = "none" },
+        {
+            name = "none",
+            virtual_hid_keyboard = {
+                keyboard_type_v2 = "ansi",
+            },
+        },
         {
             name = "main",
             selected = true,
+            virtual_hid_keyboard = {
+                keyboard_type_v2 = "ansi",
+            },
             complex_modifications = {
                 rules = {
                     make_mod(
