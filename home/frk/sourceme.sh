@@ -14,6 +14,10 @@ alias mkdir="mkdir -vp" # tell me what happened, create nested dirs
 alias ls="eza"
 alias ll="eza -la"
 
+# utils to reload nix configs
+alias switch-nix="darwin-rebuild switch --flake ~/dotfiles/nix#frk"
+alias switch-home="home-manager switch --flake ~/dotfiles/home#frk"
+
 export PATH=$PATH:$DOTDIR/frk/bin
 
 
