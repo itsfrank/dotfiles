@@ -8,6 +8,7 @@ source "${ZINIT_HOME}/zinit.zsh"
 alias ls='eza'
 alias ll='eza -la'
 alias vi='nvim'
+eval $(thefuck --alias)
 
 if [ -e $HOME/sourceme.sh ]; then
     source $HOME/sourceme.sh
@@ -16,7 +17,6 @@ fi
 if [ -e $HOME/.keysrc ]; then
     source $HOME/.keysrc
 fi
-
 
 # prompt
 eval "$(starship init zsh)"

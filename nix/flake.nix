@@ -36,6 +36,7 @@
               "wezterm"
               "zen-browser"
               "karabiner-elements"
+              "raycast"
             ];
             masApps = {
               # use `mas search tof ind them`

@@ -32,6 +32,7 @@ in
     pkgs.bat
     pkgs.eza
     pkgs.gitui
+    pkgs.thefuck
 
     # languages
     pkgs.rustup # rust, execute `rustup toolchain install stable` to install rust
