@@ -37,6 +37,7 @@
               "zen-browser"
               "karabiner-elements"
               "raycast"
+              "nikitabobko/tap/aerospace"
             ];
             masApps = {
               # use `mas search tof ind them`

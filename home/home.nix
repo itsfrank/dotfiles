@@ -56,6 +56,7 @@ in
   home.file.".zshrc".source = ./.zshrc;
   home.file."sourceme.sh".source = ./sourceme.sh;
   # configs
+  home.file.".config/aerospace".source = ./aerospace;
   home.file.".config/gitui".source = ./gitui;
   home.file.".config/tmux".source = ./tmux;
   home.file.".config/wezterm".source = ./wezterm;

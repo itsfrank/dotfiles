@@ -51,13 +51,13 @@ local k = {
                     ),
                     make_mod("window - fill", from("f", hyper_key_mods), to("f", { "left_control", "fn" })),
                     make_mod(
-                        "hyper+1 - term",
-                        from("1", hyper_key_mods),
+                        "hyper+q - term",
+                        from("q", hyper_key_mods),
                         to_cmd("/usr/bin/open /applications/ghostty.app")
                     ),
                     make_mod(
-                        "hyper+2 - browser",
-                        from("2", hyper_key_mods),
+                        "hyper+w - browser",
+                        from("w", hyper_key_mods),
                         to_cmd("/usr/bin/open '/applications/Zen Browser.app'")
                     ),
                     make_mod("cmd+l - locks screen", from("l", { "command" }), to("q", { "control", "command" })),
