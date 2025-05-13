@@ -5,11 +5,19 @@ start-at-login = true
 after-login-command = []
 
 # You can use it to add commands that run after AeroSpace startup.
-after-startup-command = ['exec-and-forget sketchybar']
+after-startup-command = [
+    'exec-and-forget sketchybar',
+    'exec-and-forget borders active_color=0xffc4a7e7 width=3.0'
+]
 
 # Notify Sketchybar about workspace change
 exec-on-workspace-change = ['/bin/bash', '-c',
     'sketchybar --trigger aerospace_workspace_change FOCUSED_WORKSPACE=$AEROSPACE_FOCUSED_WORKSPACE'
+]
+
+# disable jankyborders when only 1 window
+on-focus-changed = [
+  'exec-and-forget [ $(aerospace list-windows --workspace focused | wc -l) -eq 1 ] && borders width=0.0 || borders width=4.0',
 ]
 
 # Normalizations. See: https://nikitabobko.github.io/AeroSpace/guide#normalization

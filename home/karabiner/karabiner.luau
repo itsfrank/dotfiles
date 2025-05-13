@@ -25,6 +25,7 @@ local function make_mod(desc: string, from, to)
 end
 
 local hyper_key_mods = { "left_command", "left_control", "left_option" }
+local hyper_key_shift_mods = { "left_shift", "left_command", "left_control", "left_option" }
 local k = {
     global = {
         show_profile_name_in_menu_bar = true,
@@ -61,9 +62,19 @@ local k = {
                         to_cmd("/usr/bin/open /applications/ghostty.app")
                     ),
                     make_mod(
+                        "hyper+shift+q - term (new window)",
+                        from("q", hyper_key_shift_mods),
+                        to_cmd("/usr/bin/open -n /applications/ghostty.app")
+                    ),
+                    make_mod(
                         "hyper+w - browser",
                         from("w", hyper_key_mods),
                         to_cmd("/usr/bin/open '/applications/Zen Browser.app'")
+                    ),
+                    make_mod(
+                        "hyper+shift+w - browser (new window)",
+                        from("w", hyper_key_shift_mods),
+                        to_cmd("/usr/bin/open -n '/applications/Zen Browser.app'")
                     ),
                     make_mod("cmd+l - locks screen", from("l", { "command" }), to("q", { "control", "command" })),
                 },

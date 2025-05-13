@@ -35,6 +35,7 @@
               "mas"
               "pkl"
               "sketchybar"
+              "borders"
             ];
             casks = [
               "ghostty"
@@ -52,7 +53,12 @@
           };
 
           fonts.packages = [
-            (pkgs.nerdfonts.override { fonts = [ "SourceCodePro" "Hack" ]; })
+            (pkgs.nerdfonts.override {
+              fonts = [
+                "SourceCodePro"
+                "Hack"
+              ];
+            })
           ];
 
           # Necessary for using flakes on this system.
