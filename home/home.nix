@@ -57,14 +57,14 @@ in
   home.file."sourceme.sh".source = ./sourceme.sh;
   # configs
   home.file.".config/aerospace".source = ./aerospace;
-  home.file.".config/gitui".source = ./gitui;
-  home.file.".config/tmux".source = ./tmux;
-  home.file.".config/wezterm".source = ./wezterm;
-  home.file.".config/ghostty".source = ./ghostty;
-  home.file.".config/starship.toml".source = ./starship.toml;
   home.file.".config/frk".source = ./frk;
   home.file.".config/fzf".source = ./fzf;
-  # home.file.".config/karabiner".source = ./karabiner;
+  home.file.".config/ghostty".source = ./ghostty;
+  home.file.".config/gitui".source = ./gitui;
+  home.file.".config/sketchybar".source = ./sketchybar;
+  home.file.".config/starship.toml".source = ./starship.toml;
+  home.file.".config/tmux".source = ./tmux;
+  home.file.".config/wezterm".source = ./wezterm;
 
   home.file.".config/karabiner/karabiner.json" = {
     text = luneRun ./karabiner/karabiner.luau;

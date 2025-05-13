@@ -49,6 +49,11 @@ local k = {
                         from("caps_lock"),
                         to(hyper_key_mods[1], { table.unpack(hyper_key_mods, 2) })
                     ),
+                    make_mod(
+                        "caps-lock+shift is hyperkey+shft",
+                        from("caps_lock", { "left_shift" }),
+                        to("left_shift", hyper_key_mods)
+                    ),
                     make_mod("window - fill", from("f", hyper_key_mods), to("f", { "left_control", "fn" })),
                     make_mod(
                         "hyper+q - term",

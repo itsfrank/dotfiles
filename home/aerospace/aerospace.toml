@@ -1,9 +1,16 @@
-# You can use it to add commands that run after login to macOS user session.
-after-login-command = []
-# You can use it to add commands that run after AeroSpace startup.
-after-startup-command = []
 # Start AeroSpace at login
 start-at-login = true
+
+# You can use it to add commands that run after login to macOS user session.
+after-login-command = []
+
+# You can use it to add commands that run after AeroSpace startup.
+after-startup-command = ['exec-and-forget sketchybar']
+
+# Notify Sketchybar about workspace change
+exec-on-workspace-change = ['/bin/bash', '-c',
+    'sketchybar --trigger aerospace_workspace_change FOCUSED_WORKSPACE=$AEROSPACE_FOCUSED_WORKSPACE'
+]
 
 # Normalizations. See: https://nikitabobko.github.io/AeroSpace/guide#normalization
 enable-normalization-flatten-containers = true
@@ -139,7 +146,7 @@ automatically-unhide-macos-hidden-apps = false
 # 'service' binding mode declaration.
 # See: https://nikitabobko.github.io/AeroSpace/guide#binding-modes
 [mode.service.binding]
-    esc = ['mode main']
+    q = 'mode main'
     shift-r = ['reload-config', 'mode main']
     r = ['flatten-workspace-tree', 'mode main'] # reset layout
     f = ['layout floating tiling', 'mode main'] # Toggle between floating and tiling layout

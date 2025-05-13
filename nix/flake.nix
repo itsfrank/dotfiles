@@ -27,9 +27,14 @@
 
           homebrew = {
             enable = true;
+            taps = [
+              "FelixKratz/formulae" # for sketchybar
+              "nikitabobko/tap" # for aerospace
+            ];
             brews = [
               "mas"
               "pkl"
+              "sketchybar"
             ];
             casks = [
               "ghostty"
@@ -37,7 +42,7 @@
               "zen-browser"
               "karabiner-elements"
               "raycast"
-              "nikitabobko/tap/aerospace"
+              "aerospace"
             ];
             masApps = {
               # use `mas search tof ind them`
@@ -47,7 +52,7 @@
           };
 
           fonts.packages = [
-            (pkgs.nerdfonts.override { fonts = [ "SourceCodePro" ]; })
+            (pkgs.nerdfonts.override { fonts = [ "SourceCodePro" "Hack" ]; })
           ];
 
           # Necessary for using flakes on this system.
