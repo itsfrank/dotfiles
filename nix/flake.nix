@@ -53,12 +53,8 @@
           };
 
           fonts.packages = [
-            (pkgs.nerdfonts.override {
-              fonts = [
-                "SourceCodePro"
-                "Hack"
-              ];
-            })
+            pkgs.nerd-fonts.sauce-code-pro
+            pkgs.nerd-fonts.hack
           ];
 
           # Necessary for using flakes on this system.

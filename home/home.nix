@@ -39,7 +39,7 @@ in
     pkgs.opam # ocaml
     pkgs.go # go
     pkgs.deno # js/ts
-    pkgs.nodejs_23
+    pkgs.nodejs_24
     pkgs.zig # zig
     pkgs.nixfmt-rfc-style # nix, nixfmt isnt on mason
 
