@@ -24,14 +24,12 @@ eval "$(starship init zsh)"
 # more granular ctrl-w (removed '-', '/')
 export WORDCHARS='*?_.[]~=&;!#$%^(){}<>'
 
-
 function zvm_config() {
     local ncur=$(zvm_cursor_style $ZVM_CURSOR_BLOCK)
     ZVM_INSERT_MODE_CURSOR=$icur'\e\e]12;#ffffff\a'
 
     local icur=$(zvm_cursor_style $ZVM_CURSOR_BLOCK)
     ZVM_NORMAL_MODE_CURSOR=$ncur'\e\e]12;#ebbcba\a'
-
 }
 
 # plugins
