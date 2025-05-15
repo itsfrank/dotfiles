@@ -1,0 +1,62 @@
+#!/usr/bin/env zsh
+
+script_dir="${0:a:h}"
+homesrc_dir="$script_dir/../home"
+
+opt_dry=0
+opt_dst=$HOME
+while [[ $# -gt 0 ]]; do
+    case "$1" in
+        --dry)
+            opt_dry=1
+            shift
+            ;;
+        --dst)
+            opt_dst=$2
+            shift 2
+            ;;
+        *)
+            echo "Unknown option: $1"
+            exit 1
+            ;;
+    esac
+done
+
+cmds=()
+function conf() {
+    local src="$homesrc_dir/$1"
+    local dst="$opt_dst/$2"
+
+    echo "$1\n  -> $dst"
+    cmds+=("mkdir -p $(dirname $dst) && cp -rf $src $dst")
+}
+
+function gen() {
+    local gen_cmd=$1
+    local dst="$opt_dst/$2"
+    echo "> $1\n  -> $dst"
+    cmds+=("mkdir -p $(dirname $dst) && $gen_cmd > $dst")
+}
+
+# list config files/dirs to map
+conf "./zshrc" ".zshrc"
+conf "./sourceme.sh" "sourceme.sh"
+conf "./aerospace" ".config/aerospace"
+conf "./frk" ".config/frk"
+conf "./fzf" ".config/fzf"
+conf "./ghostty" ".config/ghostty"
+conf "./gitui" ".config/gitui"
+conf "./sketchybar" ".config/sketchybar"
+conf "./starship.toml" ".config/starship.toml"
+conf "./tmux" ".config/tmux"
+conf "./wezterm" ".config/wezterm"
+# need to use $homesrc_dir since i dont want to be parsing paths in the command
+gen "lune run $homesrc_dir/karabiner/karabiner.luau" ".config/karabiner/karabiner.json"
+
+for cmd in "${cmds[@]}"; do
+    if ((opt_dry)); then
+        echo "$cmd"
+    else
+        eval "$cmd"
+    fi
+done

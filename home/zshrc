@@ -10,12 +10,19 @@ alias ll='eza -la'
 alias vi='nvim'
 eval $(thefuck --alias)
 
+# sources all the other shell stuff in my config
 if [ -e $HOME/sourceme.sh ]; then
     source $HOME/sourceme.sh
 fi
 
+# keys/credentials (not on git...)
 if [ -e $HOME/.keysrc ]; then
     source $HOME/.keysrc
+fi
+
+# machine-specific stuff to source
+if [ -e $HOME/.localrc ]; then
+    source $HOME/.localrc
 fi
 
 # prompt
