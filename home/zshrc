@@ -4,27 +4,6 @@ ZINIT_HOME="${XDG_DATA_HOME:-${HOME}/.local/share}/zinit/zinit.git"
 [ ! -d $ZINIT_HOME/.git ] && git clone https://github.com/zdharma-continuum/zinit.git "$ZINIT_HOME"
 source "${ZINIT_HOME}/zinit.zsh"
 
-# basic aliases
-alias ls='eza'
-alias ll='eza -la'
-alias vi='nvim'
-eval $(thefuck --alias)
-
-# sources all the other shell stuff in my config
-if [ -e $HOME/sourceme.sh ]; then
-    source $HOME/sourceme.sh
-fi
-
-# keys/credentials (not on git...)
-if [ -e $HOME/.keysrc ]; then
-    source $HOME/.keysrc
-fi
-
-# machine-specific stuff to source
-if [ -e $HOME/.localrc ]; then
-    source $HOME/.localrc
-fi
-
 # prompt
 eval "$(starship init zsh)"
 
@@ -45,7 +24,6 @@ zinit light zsh-users/zsh-syntax-highlighting
 zinit light zsh-users/zsh-completions
 zinit light zsh-users/zsh-autosuggestions
 zinit light Aloxaf/fzf-tab
-zinit light joshskidmore/zsh-fzf-history-search
 zinit light jeffreytse/zsh-vi-mode
 
 zinit snippet OMZP::git
@@ -82,5 +60,22 @@ zle -N history-beginning-search-forward-end history-search-end
 bindkey "^[[A" history-beginning-search-backward-end
 bindkey "^[[B" history-beginning-search-forward-end
 
-# shell integrations
-eval $(fzf --zsh)
+# integrations
+eval "$(/opt/homebrew/bin/brew shellenv)"
+eval "$(thefuck --alias)"
+zvm_after_init_commands+=('source <(fzf --zsh)')
+
+# sources all the other shell stuff in my config
+if [ -e $HOME/sourceme.sh ]; then
+    source $HOME/sourceme.sh
+fi
+
+# keys/credentials (not on git...)
+if [ -e $HOME/.keysrc ]; then
+    source $HOME/.keysrc
+fi
+
+# machine-specific stuff to source
+if [ -e $HOME/.localrc ]; then
+    source $HOME/.localrc
+fi
