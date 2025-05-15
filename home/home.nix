@@ -53,7 +53,7 @@ in
   ];
 
   # zsh
-  home.file.".zshrc".source = ./.zshrc;
+  home.file."zshrc".source = ./.zshrc;
   home.file."sourceme.sh".source = ./sourceme.sh;
   # configs
   home.file.".config/aerospace".source = ./aerospace;
