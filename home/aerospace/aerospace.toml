@@ -151,6 +151,8 @@ automatically-unhide-macos-hidden-apps = false
     # See: https://nikitabobko.github.io/AeroSpace/commands#mode
     ctrl-alt-cmd-shift-semicolon = 'mode service'
 
+    ctrl-alt-cmd-shift-f = 'layout floating tiling'
+
 # 'service' binding mode declaration.
 # See: https://nikitabobko.github.io/AeroSpace/guide#binding-modes
 [mode.service.binding]
@@ -172,3 +174,5 @@ automatically-unhide-macos-hidden-apps = false
     up = 'volume up'
     shift-down = ['volume set 0', 'mode main']
 
+[workspace-to-monitor-force-assignment]
+    9 = 'built-in'
