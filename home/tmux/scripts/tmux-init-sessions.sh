@@ -24,6 +24,7 @@ if (make_session "$df_name" "$HOME/.config"); then
     tmux send-keys -t "$df_name:1" C-l
     tmux new-window -t "$df_name" -n "config"
     tmux send-keys -t "$df_name:2" 'cd ~/dotfiles' Enter
+    tmux send-keys -t "$df_name:2" C-l
     tmux select-window -t "$df_name:1"
     echo "created session '$df_name'"
 else
