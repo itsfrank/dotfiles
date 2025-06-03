@@ -65,8 +65,8 @@ automatically-unhide-macos-hidden-apps = false
     inner.vertical =   4
     outer.bottom =     4
     outer.top =        4
-    outer.right =      [{monitor."Odyssey G85SB" = 400}, 4 ]
-    outer.left =       [{monitor."Odyssey G85SB" = 400}, 4 ]
+    outer.right =      [{monitor."Odyssey G85SB" = 400}, {monitor."DELL U3824DW" = 400}, 4 ]
+    outer.left =       [{monitor."Odyssey G85SB" = 400}, {monitor."DELL U3824DW" = 400}, 4 ]
 
 # 'main' binding mode declaration
 # See: https://nikitabobko.github.io/AeroSpace/guide#binding-modes
@@ -175,4 +175,5 @@ automatically-unhide-macos-hidden-apps = false
     shift-down = ['volume set 0', 'mode main']
 
 [workspace-to-monitor-force-assignment]
+    8 = 'built-in'
     9 = 'built-in'
