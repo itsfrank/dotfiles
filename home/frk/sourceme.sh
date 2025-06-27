@@ -27,3 +27,4 @@ export PATH=$PATH:$HOME/bin
 export PATH=$PATH:$HOME/.local/share/bob/nvim-bin #if bob-nvim is managing nvim versions
 export PATH=$PATH:$HOME/go/bin
 export PATH=/opt/homebrew/opt/llvm/bin:$PATH # for c++ debugging
+export PATH=$HOME/.cargo/bin:$PATH # for c++ debugging
