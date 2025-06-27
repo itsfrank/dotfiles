@@ -24,4 +24,12 @@ return {
             action = wezterm.action.PasteFrom("Clipboard"),
         },
     },
+    keys = {
+        -- disable alt-enter
+        {
+            key = "Enter",
+            mods = "ALT",
+            action = wezterm.action.DisableDefaultAssignment,
+        },
+    },
 }
