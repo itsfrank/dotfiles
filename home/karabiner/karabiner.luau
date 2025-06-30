@@ -3,7 +3,7 @@ local serde = require("@lune/serde")
 local process = require("@lune/process")
 
 local is_work_laptop = process.env["IS_WORK_LAPTOP"] == "true"
-local app_browser = "'/applications/Zen Browser.app'"
+local app_browser = "'/applications/Zen.app'"
 local app_terminal = "/applications/ghostty.app"
 local app_chat = "/applications/Slack.app"
 
