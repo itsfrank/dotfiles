@@ -152,6 +152,7 @@ automatically-unhide-macos-hidden-apps = false
     ctrl-alt-cmd-shift-semicolon = 'mode service'
 
     ctrl-alt-cmd-shift-f = 'layout floating tiling'
+    ctrl-alt-cmd-g = 'exec-and-forget ~/.config/aerospace/switch-config.sh nogaps'
 
 # 'service' binding mode declaration.
 # See: https://nikitabobko.github.io/AeroSpace/guide#binding-modes

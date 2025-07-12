@@ -1,0 +1,10 @@
+[gaps]
+    inner.horizontal = 4
+    inner.vertical =   4
+    outer.bottom =     4
+    outer.top =        4
+    outer.right =      4
+    outer.left =       4
+
+[mode.main.binding]
+    ctrl-alt-cmd-g = 'exec-and-forget ~/.config/aerospace/switch-config.sh gaps'
