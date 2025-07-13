@@ -1,4 +1,9 @@
-{ config, pkgs, ... }:
+{
+  config,
+  pkgs,
+  lib,
+  ...
+}:
 let
   luneRun =
     luaFile:
@@ -57,7 +62,7 @@ in
   home.file.".zshrc".source = ./zshrc;
   home.file."sourceme.sh".source = ./sourceme.sh;
   # configs
-  home.file.".config/aerospace".source = ./aerospace;
+  # home.file.".config/aerospace".source = ./aerospace;
   home.file.".config/frk".source = ./frk;
   home.file.".config/fzf".source = ./fzf;
   home.file.".config/ghostty".source = ./ghostty;
@@ -71,6 +76,18 @@ in
     text = luneRun ./karabiner/karabiner.luau;
     force = true;
   };
+
+  # for the aerospace ultrawide gaps hack, remove when proper solution exists: https://github.com/nikitabobko/AeroSpace/issues/60
+  # make sure to install toml-cli first with `go install github.com/MinseokOh/toml-cli@latest`
+  home.activation.copyAerospaceConfig = lib.hm.dag.entryAfter [ "writeBoundary" ] ''
+    rm -rf $HOME/.config/aerospace
+    mkdir -p $HOME/.config/aerospace
+    cp ${./aerospace/switch-config.sh} $HOME/.config/aerospace/switch-config.sh
+    cp ${./aerospace/aerospace-base.toml} $HOME/.config/aerospace/aerospace.toml
+    cp ${./aerospace/aerospace-base.toml} $HOME/.config/aerospace/aerospace-gaps.toml
+    chmod +w $HOME/.config/aerospace/aerospace.toml
+    $HOME/go/bin/toml-cli merge ${./aerospace/aerospace-base.toml} ${./aerospace/nogaps-override.toml} -o $HOME/.config/aerospace/aerospace-nogaps.toml
+  '';
 
   home.sessionVariables = {
     # EDITOR = "emacs";

@@ -131,6 +131,7 @@ automatically-unhide-macos-hidden-apps = false
     ctrl-alt-cmd-7 = 'workspace 7'
     ctrl-alt-cmd-8 = 'workspace 8'
     ctrl-alt-cmd-9 = 'workspace 9'
+    ctrl-alt-cmd-0 = 'workspace 10'
 
     # See: https://nikitabobko.github.io/AeroSpace/commands#move-node-to-workspace
     ctrl-alt-cmd-shift-1 = 'move-node-to-workspace 1'
@@ -142,6 +143,7 @@ automatically-unhide-macos-hidden-apps = false
     ctrl-alt-cmd-shift-7 = 'move-node-to-workspace 7'
     ctrl-alt-cmd-shift-8 = 'move-node-to-workspace 8'
     ctrl-alt-cmd-shift-9 = 'move-node-to-workspace 9'
+    ctrl-alt-cmd-shift-0 = 'move-node-to-workspace 10'
 
     # See: https://nikitabobko.github.io/AeroSpace/commands#workspace-back-and-forth
     ctrl-alt-cmd-tab = 'workspace-back-and-forth'
@@ -176,5 +178,6 @@ automatically-unhide-macos-hidden-apps = false
     shift-down = ['volume set 0', 'mode main']
 
 [workspace-to-monitor-force-assignment]
-    8 = 'built-in'
-    9 = 'built-in'
+    8 = 'secondary'
+    9 = 'secondary'
+    10 = 'secondary'

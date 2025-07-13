@@ -41,7 +41,7 @@ function gen() {
 # list config files/dirs to map
 conf "./zshrc" ".zshrc"
 conf "./sourceme.sh" "sourceme.sh"
-conf "./aerospace/" ".config/aerospace/"
+# conf "./aerospace/" ".config/aerospace/"
 conf "./frk/" ".config/frk/"
 conf "./fzf/" ".config/fzf/"
 conf "./ghostty/" ".config/ghostty/"
@@ -55,7 +55,9 @@ conf "./wezterm/" ".config/wezterm/"
 gen "lune run $homesrc_dir/karabiner/karabiner.luau" ".config/karabiner/karabiner.json"
 
 # aerospace hack for gaps toggle
-conf "./aerospace/aerospace.toml"  ".config/aerospace/aerospace-gaps.toml"
+conf "./aerospace/aerospace-base.toml"  ".config/aerospace/aerospace.toml"
+conf "./aerospace/aerospace-base.toml"  ".config/aerospace/aerospace-gaps.toml"
+conf "./aerospace/switch-config.sh"  ".config/aerospace/switch-config.sh"
 gen "toml-cli merge $homesrc_dir/aerospace/aerospace.toml $homesrc_dir/aerospace/nogaps-override.toml -o /tmp/out.toml | cat /tmp/out.toml"  ".config/aerospace/aerospace-nogaps.toml"
 
 for cmd in "${cmds[@]}"; do
