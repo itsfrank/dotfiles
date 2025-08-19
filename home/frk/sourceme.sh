@@ -19,6 +19,8 @@ _aichatglow() {
 }
 alias ai="_aichatglow"
 
+alias aerospace-switch="aerospace list-windows --all | fzf | cut -d '|' -f 1 | xargs -I {} aerospace focus --window-id {}"
+
 # utils to reload nix configs
 alias switch-nix="darwin-rebuild switch --flake ~/dotfiles/nix#frk"
 alias switch-home="home-manager switch --flake ~/dotfiles/home#frk"
@@ -31,4 +33,4 @@ export PATH=$PATH:$HOME/bin
 export PATH=$PATH:$HOME/.local/share/bob/nvim-bin #if bob-nvim is managing nvim versions
 export PATH=$PATH:$HOME/go/bin
 export PATH=/opt/homebrew/opt/llvm/bin:$PATH # for c++ debugging
-export PATH=$HOME/.cargo/bin:$PATH # for c++ debugging
+export PATH=$HOME/.cargo/bin:$PATH           # for c++ debugging

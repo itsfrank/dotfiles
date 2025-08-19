@@ -25,10 +25,14 @@ return {
         },
     },
     keys = {
-        -- disable alt-enter
-        {
+        { -- disable alt-enter, I use for copilot/supermaven
             key = "Enter",
             mods = "ALT",
+            action = wezterm.action.DisableDefaultAssignment,
+        },
+        { -- disable cmd-w so i dont accidentally kill wezterm
+            key = "w",
+            mods = "CMD",
             action = wezterm.action.DisableDefaultAssignment,
         },
     },
