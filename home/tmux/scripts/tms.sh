@@ -19,6 +19,7 @@ else
                 2>/dev/null
         )
         $(fd --type d --min-depth 2 --max-depth 2 . ~/git/roblox/ge-worktrees 2>/dev/null)
+        $(fd --type d --min-depth 2 --max-depth 2 . ~/git/roblox/sp-worktrees 2>/dev/null)
         "$HOME/.config"
         "$HOME/.config/nvim"
         "$HOME/dotfiles"

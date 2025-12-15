@@ -11,4 +11,4 @@ tmux-init-sessions() {
     "$DOTDIR"/tmux/scripts/tmux-init-sessions.sh "$@"
 }
 
-alias tinit="tmux-init-sessions"
+alias tmi="tmux-init-sessions"
