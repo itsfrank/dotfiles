@@ -36,6 +36,12 @@
               "pkl"
               "sketchybar"
               "borders"
+              "elixir"
+              "opencode"
+              "codex"
+              "colima"
+              "docker"
+              "docker-compose"
             ];
             casks = [
               "ghostty"
