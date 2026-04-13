@@ -84,3 +84,5 @@ if [ -e $HOME/.localrc ]; then
 fi
 
 bindkey -r '\e' #I dont like it when I hit esc and it goes to vi mode
+
+eval "$(mise activate zsh)"

@@ -9,7 +9,6 @@ local app_chat = "/applications/Slack.app"
 
 if is_work_laptop then
     app_browser = "/applications/Arc.app"
-    app_terminal = "/applications/WezTerm.app"
 end
 
 local function to(key: string, mods: { string }?)
