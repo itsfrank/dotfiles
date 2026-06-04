@@ -1,26 +1,16 @@
-# rose-pine colors
-set -g @base "#191724"
-set -g @surface "#1f1d2e"
-set -g @overlay "#26233a"
-set -g @muted "#6e6a86"
-set -g @subtle "#908caa"
-set -g @text "#e0def4"
-set -g @love "#eb6f92"
-set -g @gold "#f6c177"
-set -g @rose "#ebbcba"
-set -g @pine "#419abe"
-set -g @foam "#9ccfd8"
-set -g @iris "#c4a7e7"
-set -g @highlight_low "#21202e"
-set -g @highlight_med "#403d52"
-set -g @highlight_high "#524f67"	
+# cafbonfox based
+set -g @black   "#282828" # color0
+set -g @yellow  "#08bdba" # color3
+set -g @magenta "#be95ff" # color5
+set -g @cyan    "#33b1ff" # color6
+set -g @gray    "#484848" # color8
 
-# intermediate vars for easy swapping
-set -gF @command-fg "#{@foam}"
-set -gF @status-fg "#{@iris}"
-set -gF @current-win "#{@rose}"
-set -gF @blank "#{@base}"
-set -gF @separator "#{@overlay}"
+# UI roles
+set -gF @command-fg "#{@yellow}"
+set -gF @status-fg "#{@magenta}"
+set -gF @current-win "#{@yellow}"
+set -gF @blank "#{@black}"
+set -gF @separator "#{@gray}"
 
 # set styles (adapted from @pcheng17)
 set -g status-style "bg=default fg=#{@status-fg}"

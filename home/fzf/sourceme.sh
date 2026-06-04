@@ -1,5 +1,5 @@
 # set colorscheme
-source $DOTDIR/fzf/colorschemes/rose-pine.sh
+source $DOTDIR/fzf/colorschemes/carbonfox.sh
 
 # add bindings
 export FZF_DEFAULT_OPTS="$FZF_DEFAULT_OPTS
