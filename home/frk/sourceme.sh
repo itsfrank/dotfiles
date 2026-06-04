@@ -14,6 +14,7 @@ alias mkdir="mkdir -vp" # tell me what happened, create nested dirs
 alias ls="eza"
 alias ll="eza -la"
 alias vi='nvim'
+alias v='nvim'
 _aichatglow() {
     aichat "$@" | glow
 }
