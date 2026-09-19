@@ -1,6 +1,6 @@
 -- i hate managing my karabiner json, so we generate it instead :)
-local serde = require("@lune/serde")
-local process = require("@lune/process")
+local json = require("@std/json")
+local process = require("@lute/process")
 
 local is_work_laptop = process.env["IS_WORK_LAPTOP"] == "true"
 local app_browser = "'/applications/Zen.app'"
@@ -20,12 +20,10 @@ end
 local function from(key: string, mods: { string }?)
     return {
         key_code = key,
-        modifiers = {
-            mandatory = mods,
-        },
+        modifiers = if mods then { mandatory = mods } else json.object({}),
     }
 end
-local function make_mod(desc: string, from, to)
+local function make_mod(desc: string, from: any, to: any)
     return {
         description = desc,
         manipulators = {
@@ -97,4 +95,4 @@ local k = {
     },
 }
 
-print(serde.encode("json", k, true))
+print(json.serialize(k, true))

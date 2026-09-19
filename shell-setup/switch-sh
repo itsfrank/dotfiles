@@ -52,7 +52,7 @@ conf "./tmux/" ".config/tmux/"
 conf "./wezterm/" ".config/wezterm/"
 
 # need to use $homesrc_dir since i dont want to be parsing paths in the command
-gen "lune run $homesrc_dir/karabiner/karabiner.luau" ".config/karabiner/karabiner.json"
+gen "lute run $homesrc_dir/karabiner/karabiner.luau" ".config/karabiner/karabiner.json"
 
 # aerospace hack for gaps toggle
 conf "./aerospace/aerospace-base.toml"  ".config/aerospace/aerospace.toml"

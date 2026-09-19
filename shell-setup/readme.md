@@ -8,4 +8,4 @@ Copies the configurations in `../home` into a home directory without requiring a
 ./switch-sh --dst /path/to/home
 ```
 
-The script requires `zsh`, `rsync`, `lune`, and `toml-cli` for the generated Karabiner and AeroSpace configurations.
+The script requires `zsh`, `rsync`, `lute`, and `toml-cli` for the generated Karabiner and AeroSpace configurations.
