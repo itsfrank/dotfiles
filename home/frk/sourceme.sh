@@ -22,10 +22,7 @@ alias ai="_aichatglow"
 
 alias aerospace-switch="aerospace list-windows --all | fzf | cut -d '|' -f 1 | xargs -I {} aerospace focus --window-id {}"
 
-# utils to reload nix configs
-alias switch-nix="darwin-rebuild switch --flake ~/dotfiles/nix#frk"
-alias switch-home="home-manager switch --flake ~/dotfiles/home#frk"
-# reload configs when not using nix
+# reload dotfiles
 alias switch-sh="$HOME/dotfiles/shell-setup/switch-sh"
 
 # path

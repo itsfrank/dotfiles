@@ -1,1 +1,11 @@
-best-effort setup scripts for systems that don't/can't have nix installed
+# Shell setup
+
+Copies the configurations in `../home` into a home directory without requiring a configuration manager.
+
+```sh
+./switch-sh          # install into $HOME
+./switch-sh --dry    # print the commands without running them
+./switch-sh --dst /path/to/home
+```
+
+The script requires `zsh`, `rsync`, `lune`, and `toml-cli` for the generated Karabiner and AeroSpace configurations.
