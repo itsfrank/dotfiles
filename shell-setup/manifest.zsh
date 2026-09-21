@@ -17,4 +17,4 @@ gen lute "run $homesrc_dir/karabiner/karabiner.luau" ".config/karabiner/karabine
 conf "./aerospace/aerospace-base.toml" ".config/aerospace/aerospace.toml"
 conf "./aerospace/aerospace-base.toml" ".config/aerospace/aerospace-gaps.toml"
 conf "./aerospace/switch-config.sh" ".config/aerospace/switch-config.sh"
-gen toml-cli "merge $homesrc_dir/aerospace/aerospace-base.toml $homesrc_dir/aerospace/nogaps-override.toml -o /tmp/out.toml | cat /tmp/out.toml" ".config/aerospace/aerospace-nogaps.toml"
+gen toml-cli "merge $homesrc_dir/aerospace/aerospace-base.toml $homesrc_dir/aerospace/nogaps-override.toml -o /tmp/out.toml && cat /tmp/out.toml" ".config/aerospace/aerospace-nogaps.toml"
