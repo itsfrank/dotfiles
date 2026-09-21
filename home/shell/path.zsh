@@ -1,0 +1,7 @@
+export PATH="$PATH:$XDG_CONFIG_HOME/shell/bin"
+export PATH="$PATH:$HOME/bin"
+export PATH="$PATH:$HOME/.local/share/bob/nvim-bin"
+export PATH="$PATH:$HOME/go/bin"
+export PATH="/opt/homebrew/opt/llvm/bin:$PATH"
+export PATH="$HOME/.cargo/bin:$PATH"
+export PATH="$HOME/.bun/bin:$PATH"
