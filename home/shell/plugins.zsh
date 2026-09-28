@@ -7,7 +7,16 @@ source "$ZINIT_HOME/zinit.zsh"
 zinit ice depth=1
 zinit light zsh-users/zsh-syntax-highlighting
 zinit light zsh-users/zsh-completions
-zinit light zsh-users/zsh-autosuggestions
+
+if (( $+commands[deja] )); then
+    export DEJA_CYCLE_KEY='^N'
+    zinit ice wait"0" lucid depth=1
+    zinit light Giammarco-Ferranti/deja
+else
+    print -u2 -r -- "deja not installed, falling back to zsh-autosuggestions"
+    zinit light zsh-users/zsh-autosuggestions
+fi
+
 zinit light Aloxaf/fzf-tab
 zinit snippet OMZP::git
 
