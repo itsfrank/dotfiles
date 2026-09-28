@@ -6,6 +6,20 @@ function _get_session_name {
     echo "$result"
 }
 
+function _list_sessions {
+    tmux list-sessions | while IFS= read -r session_line; do
+        local session_name=$(_get_session_name "$session_line")
+        local pane_path=$(tmux display-message -p -t "$session_name" '#{pane_current_path}')
+        local branch=$(git -C "$pane_path" branch --show-current 2>/dev/null)
+
+        if [[ -n "$branch" ]]; then
+            session_line+=" [$branch]"
+        fi
+
+        printf '%s\n' "$session_line"
+    done
+}
+
 function _tmx {
     function _exec {
         local session=$(_get_session_name "$1")
@@ -13,11 +27,12 @@ function _tmx {
     }
 
     export -f _get_session_name
+    export -f _list_sessions
     export -f _exec
     local choice=$(
-        tmux list-sessions | SHELL=/bin/bash fzf \
+        _list_sessions | SHELL=/bin/bash fzf \
             --layout=reverse \
-            --bind='ctrl-x:execute(_exec {})+reload(tmux list-sessions)' \
+            --bind='ctrl-x:execute(_exec {})+reload(_list_sessions)' \
             --expect="ctrl-n" \
             --expect="ctrl-s" \
             --expect="ctrl-i" \
