@@ -1,0 +1,7 @@
+[tools]
+"github:JohnnyMorganz/luau-lsp" = "latest"
+stylua = "latest"
+lua-language-server = "latest"
+rust = "stable"
+"github:luau-lang/lute" = "latest"
+"github:Giammarco-Ferranti/deja" = "latest"
