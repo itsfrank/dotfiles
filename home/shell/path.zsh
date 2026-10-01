@@ -1,3 +1,4 @@
+export PATH="$HOME/.local/bin:$PATH"
 export PATH="$PATH:$XDG_CONFIG_HOME/shell/bin"
 export PATH="$PATH:$HOME/bin"
 export PATH="$PATH:$HOME/.local/share/bob/nvim-bin"
