@@ -50,7 +50,7 @@ local main_rules = {
         from("w", hyper_key_shift_mods),
         to_cmd(`/usr/bin/open -n {app_browser}`)
     ),
-    make_mod("cmd+l - locks screen", from("l", { "command" }), to("q", { "control", "command" })),
+    make_mod("cmd+alt+l - locks screen", from("l", { "command", "option" }), to("q", { "control", "command" })),
     make_mod("window - fill", from("f", hyper_key_mods), to("f", { "left_control", "fn" })),
 }
 
